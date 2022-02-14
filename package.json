@@ -1,0 +1,25 @@
+{
+  "name": "twuc-tdd-frontend-mars-rover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tws-graduate-program/twuc-tdd-frontend-mars-rover.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tws-graduate-program/twuc-tdd-frontend-mars-rover/issues"
+  },
+  "homepage": "https://github.com/tws-graduate-program/twuc-tdd-frontend-mars-rover#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
+  }
+}
