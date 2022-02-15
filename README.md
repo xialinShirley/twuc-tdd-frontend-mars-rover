@@ -14,15 +14,18 @@
 **输出：**
 * 输出每个火星车的最终坐标和航向。
 
-Example:  
-**Input:**  
+**Example:**  
+
+Input:
+
 5 5  
 1 2 N  
 LMLMLMLMM  
 3 3 E  
 MMRMMRMRRM
 
-**Expected Output:**  
+Expected Output:
+
 1 3 N  
 5 1 E
 
