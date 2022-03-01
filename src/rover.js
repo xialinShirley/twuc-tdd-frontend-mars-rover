@@ -12,14 +12,8 @@ export default class Rover {
   }
 
   turnLeft() {
-    if (this.location.direction === 'N') {
-      this.location.direction = 'W';
-    } else if (this.location.direction === 'W') {
-      this.location.direction = 'S';
-    } else if (this.location.direction === 'S') {
-      this.location.direction = "E";
-    } else {
-      this.location.direction = 'N';
-    }
+    const directions = ['N', 'W', "S", 'E'];
+    const index = directions.indexOf(this.location.direction);
+    this.location.direction = directions[index + 1] || directions[0];
   }
 }
