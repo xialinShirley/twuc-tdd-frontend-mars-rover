@@ -12,14 +12,19 @@ export default class Rover {
   }
 
   turnLeft() {
-    const directions = ['N', 'W', "S", 'E'];
-    const index = directions.indexOf(this.location.direction);
-    this.location.direction = directions[index + 1] || directions[0];
+    this.location.direction = this.getNextDirection(this.location.direction);
   }
 
   turnRight() {
+    this.location.direction = this.getNextDirection(this.location.direction, true);
+  }
+
+  getNextDirection(direction, isClosewise) {
     const directions = ['N', 'W', "S", 'E'];
     const index = directions.indexOf(this.location.direction);
-    this.location.direction = directions[index - 1] || directions[directions.length - 1];
+    if (isClosewise) {
+      return directions[index - 1] || directions[directions.length - 1];
+    }
+    return directions[index + 1] || directions[0];
   }
 }

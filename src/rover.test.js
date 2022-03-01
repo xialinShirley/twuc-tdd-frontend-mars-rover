@@ -25,7 +25,7 @@ describe("Mars rover", () => {
     { location: {x: 0, y: 0, direction: 'W'}, expected: {x: 0, y: 0, direction: 'N'} },
     { location: {x: 0, y: 0, direction: 'S'}, expected: {x: 0, y: 0, direction: 'W'} },
     { location: {x: 0, y: 0, direction: 'E'}, expected: {x: 0, y: 0, direction: 'S'} },
-  ])("Should follow rules %j when rover turns left", ({ location, expected }) => {
+  ])("Should follow rules %j when rover turns right", ({ location, expected }) => {
     const rover = new Rover();
     rover.setLocation(location);
     rover.turnRight();
