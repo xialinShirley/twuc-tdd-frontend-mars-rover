@@ -8,11 +8,15 @@ describe("Mars rover", () => {
     expect(rover.getLocation()).toEqual(location);
   })
 
-  test("Should facing W when rover turns left from N", () => {
-    const location = {x: 0, y: 0, direction: 'N'};
+  test.each([
+    { location: {x: 0, y: 0, direction: 'N'}, expected: {x: 0, y: 0, direction: 'W'} },
+    { location: {x: 0, y: 0, direction: 'W'}, expected: {x: 0, y: 0, direction: 'S'} },
+    { location: {x: 0, y: 0, direction: 'S'}, expected: {x: 0, y: 0, direction: 'E'} },
+    { location: {x: 0, y: 0, direction: 'E'}, expected: {x: 0, y: 0, direction: 'N'} },
+  ])("Should follow rules %j when rover turns left", ({ location, expected }) => {
     const rover = new Rover();
     rover.setLocation(location);
     rover.turnLeft();
-    expect(rover.getLocation()).toEqual({ x: 0, y: 0, direction: 'W' });
+    expect(rover.getLocation()).toEqual(expected);
   })
 })

@@ -14,6 +14,12 @@ export default class Rover {
   turnLeft() {
     if (this.location.direction === 'N') {
       this.location.direction = 'W';
+    } else if (this.location.direction === 'W') {
+      this.location.direction = 'S';
+    } else if (this.location.direction === 'S') {
+      this.location.direction = "E";
+    } else {
+      this.location.direction = 'N';
     }
   }
 }
