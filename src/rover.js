@@ -10,4 +10,10 @@ export default class Rover {
   getLocation() {
     return this.location;
   }
+
+  turnLeft() {
+    if (this.location.direction === 'N') {
+      this.location.direction = 'W';
+    }
+  }
 }
