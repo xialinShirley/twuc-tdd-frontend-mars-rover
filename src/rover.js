@@ -22,10 +22,10 @@ export default class Rover {
     );
   }
 
-  getNextDirection(direction, isClosewise) {
+  getNextDirection(direction, isClockwise) {
     const directions = ["N", "W", "S", "E"];
     const index = directions.indexOf(this.location.direction);
-    if (isClosewise) {
+    if (isClockwise) {
       return directions[index - 1] || directions[directions.length - 1];
     }
     return directions[index + 1] || directions[0];
