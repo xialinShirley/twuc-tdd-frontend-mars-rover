@@ -1,4 +1,9 @@
 export default class Rover{
-    constructor() {
+    constructor(location) {
+        this.location = location;
+    }
+
+    getLocation(){
+        return this.location;
     }
 }
